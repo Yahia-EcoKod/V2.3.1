@@ -1,0 +1,1748 @@
+{
+  "categories": [
+    {
+      "code": "plant",
+      "name": "Название растения"
+    },
+    {
+      "code": "waste",
+      "name": "Сортировка мусора"
+    },
+    {
+      "code": "animal",
+      "name": "Название животного"
+    },
+    {
+      "code": "habitat",
+      "name": "Где живёт"
+    },
+    {
+      "code": "diet",
+      "name": "Чем питается"
+    },
+    {
+      "code": "group",
+      "name": "К какой группе относится"
+    },
+    {
+      "code": "eco_act",
+      "name": "Эко и неэко: активности"
+    },
+    {
+      "code": "eco_item",
+      "name": "Эко и неэко: предметы"
+    }
+  ],
+  "questions": [
+    {
+      "id": "plant-001",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_birch.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Дуб"
+        },
+        {
+          "type": "text",
+          "value": "Сосна"
+        },
+        {
+          "type": "text",
+          "value": "Берёза"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "plant-002",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_oak.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Клён"
+        },
+        {
+          "type": "text",
+          "value": "Дуб"
+        },
+        {
+          "type": "text",
+          "value": "Осина"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "plant-003",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_chamomile.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Лютик"
+        },
+        {
+          "type": "text",
+          "value": "Ромашка"
+        },
+        {
+          "type": "text",
+          "value": "Колокольчик"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "plant-004",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_tulip.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Незабудка"
+        },
+        {
+          "type": "text",
+          "value": "Тюльпан"
+        },
+        {
+          "type": "text",
+          "value": "Одуванчик"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "plant-005",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_lily_of_the_valley.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Колокольчик"
+        },
+        {
+          "type": "text",
+          "value": "Ландыш"
+        },
+        {
+          "type": "text",
+          "value": "Ромашка"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8"
+      ]
+    },
+    {
+      "id": "plant-006",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_cactus.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Крапива"
+        },
+        {
+          "type": "text",
+          "value": "Алоэ"
+        },
+        {
+          "type": "text",
+          "value": "Кактус"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8"
+      ]
+    },
+    {
+      "id": "plant-007",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_bilberry.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Голубика"
+        },
+        {
+          "type": "text",
+          "value": "Черника"
+        },
+        {
+          "type": "text",
+          "value": "Брусника"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8"
+      ]
+    },
+    {
+      "id": "plant-008",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_rosehip.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Ежевика"
+        },
+        {
+          "type": "text",
+          "value": "Малина"
+        },
+        {
+          "type": "text",
+          "value": "Шиповник"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8"
+      ]
+    },
+    {
+      "id": "plant-009",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_elm.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Ива"
+        },
+        {
+          "type": "text",
+          "value": "Липа"
+        },
+        {
+          "type": "text",
+          "value": "Вяз"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "9-11"
+      ]
+    },
+    {
+      "id": "plant-010",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_seabuckthorn.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Бузина"
+        },
+        {
+          "type": "text",
+          "value": "Облепиха"
+        },
+        {
+          "type": "text",
+          "value": "Рябина"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "9-11"
+      ]
+    },
+    {
+      "id": "plant-011",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_yarrow.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Подорожник"
+        },
+        {
+          "type": "text",
+          "value": "Чистотел"
+        },
+        {
+          "type": "text",
+          "value": "Тысячелистник"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "9-11"
+      ]
+    },
+    {
+      "id": "plant-012",
+      "category": "plant",
+      "text": "Что это за растение?",
+      "image": "plants/plant_clover.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Люцерна"
+        },
+        {
+          "type": "text",
+          "value": "Клевер"
+        },
+        {
+          "type": "text",
+          "value": "Одуванчик"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-001",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_newspaper.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-002",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_water_bottle.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-003",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_glass_bottle.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_red.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-004",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_battery.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_red.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-005",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_cardboard_box.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_red.png"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-006",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_energy_saving_lamp.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_red.png"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-007",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_notebook.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_red.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-008",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_glass_jar.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-009",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_tin_can.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "waste-010",
+      "category": "waste",
+      "text": "В какой бак выбросить?",
+      "image": "waste/waste_shampoo_bottle.jpg",
+      "options": [
+        {
+          "type": "image",
+          "value": "bins/bin_blue.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_green.png"
+        },
+        {
+          "type": "image",
+          "value": "bins/bin_yellow.png"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-001",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_pheasant.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Фазан"
+        },
+        {
+          "type": "text",
+          "value": "Куропатка"
+        },
+        {
+          "type": "text",
+          "value": "Журавль"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-002",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_chameleon.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Игуана"
+        },
+        {
+          "type": "text",
+          "value": "Ящерица"
+        },
+        {
+          "type": "text",
+          "value": "Хамелеон"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-003",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_lemur.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Лемур"
+        },
+        {
+          "type": "text",
+          "value": "Галаго"
+        },
+        {
+          "type": "text",
+          "value": "Мартышка"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-004",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_muskox.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Як"
+        },
+        {
+          "type": "text",
+          "value": "Лесной кабан"
+        },
+        {
+          "type": "text",
+          "value": "Овцебык"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-005",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_kite.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Гриф"
+        },
+        {
+          "type": "text",
+          "value": "Коршун"
+        },
+        {
+          "type": "text",
+          "value": "Ворон"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-006",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_tit.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Снегирь"
+        },
+        {
+          "type": "text",
+          "value": "Воробей"
+        },
+        {
+          "type": "text",
+          "value": "Синица"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-007",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_piranha.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Щука"
+        },
+        {
+          "type": "text",
+          "value": "Пиранья"
+        },
+        {
+          "type": "text",
+          "value": "Карась"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-008",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_snow_leopard.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Снежный барс"
+        },
+        {
+          "type": "text",
+          "value": "Серый леопард"
+        },
+        {
+          "type": "text",
+          "value": "Канадская рысь"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-009",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_amur_tiger.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Снежный барс"
+        },
+        {
+          "type": "text",
+          "value": "Амурский тигр"
+        },
+        {
+          "type": "text",
+          "value": "Канадская рысь"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-010",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_grizzly.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Белый медведь"
+        },
+        {
+          "type": "text",
+          "value": "Барибал"
+        },
+        {
+          "type": "text",
+          "value": "Гризли"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-011",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_canadian_lynx.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Снежный барс"
+        },
+        {
+          "type": "text",
+          "value": "Амурский тигр"
+        },
+        {
+          "type": "text",
+          "value": "Канадская рысь"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-012",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_blue_whale.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Кашалот"
+        },
+        {
+          "type": "text",
+          "value": "Синий кит"
+        },
+        {
+          "type": "text",
+          "value": "Белуха"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-013",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_white_stork.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Белый аист"
+        },
+        {
+          "type": "text",
+          "value": "Журавль"
+        },
+        {
+          "type": "text",
+          "value": "Стерх"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-014",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_przewalski_horse.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Мустанг"
+        },
+        {
+          "type": "text",
+          "value": "Лошадь Пржевальского"
+        },
+        {
+          "type": "text",
+          "value": "Степной ослик"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "animal-015",
+      "category": "animal",
+      "text": "Что это за животное?",
+      "image": "animals/animal_european_bison.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Овцебык"
+        },
+        {
+          "type": "text",
+          "value": "Лесной кабан"
+        },
+        {
+          "type": "text",
+          "value": "Зубр"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "habitat-001",
+      "category": "habitat",
+      "text": "Где живёт белка?",
+      "image": "habitat/animal_squirrel.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "В дупле"
+        },
+        {
+          "type": "text",
+          "value": "В норе"
+        },
+        {
+          "type": "text",
+          "value": "В воде"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "habitat-002",
+      "category": "habitat",
+      "text": "Где живёт лиса?",
+      "image": "habitat/animal_fox.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "В дупле"
+        },
+        {
+          "type": "text",
+          "value": "В норе"
+        },
+        {
+          "type": "text",
+          "value": "В гнезде"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "habitat-003",
+      "category": "habitat",
+      "text": "Где живёт пчела?",
+      "image": "habitat/animal_bee.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "В скворечнике"
+        },
+        {
+          "type": "text",
+          "value": "В будке"
+        },
+        {
+          "type": "text",
+          "value": "В улье"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "habitat-004",
+      "category": "habitat",
+      "text": "Где живёт дельфин?",
+      "image": "habitat/animal_dolphin.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Река"
+        },
+        {
+          "type": "text",
+          "value": "Океан"
+        },
+        {
+          "type": "text",
+          "value": "Озеро"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "habitat-005",
+      "category": "habitat",
+      "text": "Где живёт осьминог?",
+      "image": "habitat/animal_octopus.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Река"
+        },
+        {
+          "type": "text",
+          "value": "Озеро"
+        },
+        {
+          "type": "text",
+          "value": "Океан"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "habitat-006",
+      "category": "habitat",
+      "text": "Где живёт полярная сова?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Тайга"
+        },
+        {
+          "type": "text",
+          "value": "Степь"
+        },
+        {
+          "type": "text",
+          "value": "Тундра"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "habitat-007",
+      "category": "habitat",
+      "text": "Где живёт питон?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Тундра"
+        },
+        {
+          "type": "text",
+          "value": "Джунгли"
+        },
+        {
+          "type": "text",
+          "value": "Степь"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "habitat-008",
+      "category": "habitat",
+      "text": "Где живёт фенек?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Тундра"
+        },
+        {
+          "type": "text",
+          "value": "Сахара"
+        },
+        {
+          "type": "text",
+          "value": "Тайга"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "habitat-009",
+      "category": "habitat",
+      "text": "Где живёт тушканчик?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Болото"
+        },
+        {
+          "type": "text",
+          "value": "Пустыня"
+        },
+        {
+          "type": "text",
+          "value": "Горы"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "habitat-010",
+      "category": "habitat",
+      "text": "Где живёт сайгак?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Степь"
+        },
+        {
+          "type": "text",
+          "value": "Тундра"
+        },
+        {
+          "type": "text",
+          "value": "Тайга"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "diet-001",
+      "category": "diet",
+      "text": "Чем питается коала?",
+      "image": "diet/animal_koala.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Бамбук"
+        },
+        {
+          "type": "text",
+          "value": "Листья эвкалипта"
+        },
+        {
+          "type": "text",
+          "value": "Листья берёзы"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "diet-002",
+      "category": "diet",
+      "text": "Чем питается ворона?",
+      "image": "diet/animal_crow.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Только мясо"
+        },
+        {
+          "type": "text",
+          "value": "Только растения"
+        },
+        {
+          "type": "text",
+          "value": "Всё подряд"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "diet-003",
+      "category": "diet",
+      "text": "Чем питается заяц?",
+      "image": "diet/animal_hare.jpg",
+      "options": [
+        {
+          "type": "text",
+          "value": "Трава"
+        },
+        {
+          "type": "text",
+          "value": "Всё подряд"
+        },
+        {
+          "type": "text",
+          "value": "Насекомые"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4"
+      ]
+    },
+    {
+      "id": "group-001",
+      "category": "group",
+      "text": "К какой группе относится дельфин?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Рыба"
+        },
+        {
+          "type": "text",
+          "value": "Птица"
+        },
+        {
+          "type": "text",
+          "value": "Млекопитающее"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-002",
+      "category": "group",
+      "text": "К какой группе относится лягушка?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Рыбы"
+        },
+        {
+          "type": "text",
+          "value": "Земноводные"
+        },
+        {
+          "type": "text",
+          "value": "Насекомые"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-003",
+      "category": "group",
+      "text": "К какой группе относится акула?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Млекопитающие"
+        },
+        {
+          "type": "text",
+          "value": "Рыбы"
+        },
+        {
+          "type": "text",
+          "value": "Земноводные"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-004",
+      "category": "group",
+      "text": "К какой группе относится тритон?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Рептилия"
+        },
+        {
+          "type": "text",
+          "value": "Амфибия"
+        },
+        {
+          "type": "text",
+          "value": "Ракообразное"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-005",
+      "category": "group",
+      "text": "К какой группе относится краб?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Рыба"
+        },
+        {
+          "type": "text",
+          "value": "Моллюск"
+        },
+        {
+          "type": "text",
+          "value": "Ракообразное"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-006",
+      "category": "group",
+      "text": "К какой группе относится осьминог?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Рыба"
+        },
+        {
+          "type": "text",
+          "value": "Моллюск"
+        },
+        {
+          "type": "text",
+          "value": "Ракообразное"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-007",
+      "category": "group",
+      "text": "К какой группе относится ёж?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Насекомое"
+        },
+        {
+          "type": "text",
+          "value": "Рептилия"
+        },
+        {
+          "type": "text",
+          "value": "Млекопитающее"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-008",
+      "category": "group",
+      "text": "К какой группе относится паук?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Насекомое"
+        },
+        {
+          "type": "text",
+          "value": "Многоножка"
+        },
+        {
+          "type": "text",
+          "value": "Паукообразное"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-009",
+      "category": "group",
+      "text": "К какой группе относится кит?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Рыба"
+        },
+        {
+          "type": "text",
+          "value": "Млекопитающее"
+        },
+        {
+          "type": "text",
+          "value": "Пресмыкающееся"
+        }
+      ],
+      "correctIndex": 1,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "group-010",
+      "category": "group",
+      "text": "К какой группе относится скворец?",
+      "image": null,
+      "options": [
+        {
+          "type": "text",
+          "value": "Насекомое"
+        },
+        {
+          "type": "text",
+          "value": "Зверь"
+        },
+        {
+          "type": "text",
+          "value": "Птица"
+        }
+      ],
+      "correctIndex": 2,
+      "grades": [
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-act-001",
+      "category": "eco_act",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_act_1_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_act_1_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-act-002",
+      "category": "eco_act",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_act_2_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_act_2_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-act-003",
+      "category": "eco_act",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_act_3_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_act_3_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-act-004",
+      "category": "eco_act",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_act_4_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_act_4_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-act-005",
+      "category": "eco_act",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_act_5_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_act_5_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-item-001",
+      "category": "eco_item",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_item_1_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_item_1_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-item-002",
+      "category": "eco_item",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_item_2_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_item_2_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-item-003",
+      "category": "eco_item",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_item_3_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_item_3_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-item-004",
+      "category": "eco_item",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_item_4_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_item_4_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    },
+    {
+      "id": "eco-item-005",
+      "category": "eco_item",
+      "text": "Выбери эко-вариант",
+      "image": null,
+      "options": [
+        {
+          "type": "image",
+          "value": "eco/eco_item_5_eco.jpg"
+        },
+        {
+          "type": "image",
+          "value": "eco/eco_item_5_noneco.jpg"
+        }
+      ],
+      "correctIndex": 0,
+      "grades": [
+        "1-4",
+        "5-8",
+        "9-11"
+      ]
+    }
+  ]
+}

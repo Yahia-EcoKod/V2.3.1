@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Юный Эколог">
+<meta name="theme-color" content="#61C5FD">
+<title>Юный Эколог</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons_logo/favicon-32.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons_logo/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<!-- Библиотека three.js лежит в папке lib, поэтому игра работает и без интернета -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./lib/three/three.module.js",
+    "three/examples/jsm/": "./lib/three/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="frame">
+  <canvas id="game"></canvas>
+  <div id="ui"></div>
+  <div id="debug"></div>
+</div>
+<script type="module" src="src/main.js"></script>
+<script>
+  // Нужно, чтобы Chrome предложил «Установить приложение» (без значка Chrome на иконке)
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* Юный Эколог 2.0: общий стиль. Палитра и правила света описаны в docs/game-spec-v2.md (раздел 6) */
+@font-face { font-family: Nunito; font-weight: 900; font-display: swap; src: url("assets/fonts/static/Nunito-Black.ttf"); }
+@font-face { font-family: Nunito; font-weight: 700; font-display: swap; src: url("assets/fonts/static/Nunito-Bold.ttf"); }
+@font-face { font-family: Nunito; font-weight: 400; font-display: swap; src: url("assets/fonts/static/Nunito-Regular.ttf"); }
+
+:root {
+  --sky: #61C5FD;
+  --sky-light: #CEEBFC;
+  --sun: #FEC742;
+  --green: #3FA040;
+  --green-dark: #1F6B34;
+  --ink: #25483A;
+  --cream: #FCF0DB;
+}
+
+html, body {
+  margin: 0; padding: 0; width: 100%; height: 100%;
+  overflow: hidden; background: #174C35;
+  touch-action: none; overscroll-behavior: none;
+  -webkit-user-select: none; user-select: none;
+  -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+  font-family: Nunito, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+/* Игровое окно: по центру, на телефоне во весь экран */
+#frame { position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: 0 auto; background: #BFE6FB; overflow: hidden; }
+#game { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#ui { position: absolute; inset: 0; pointer-events: none; }
+#debug {
+  position: absolute; z-index: 20; pointer-events: none;
+  top: calc(6px + env(safe-area-inset-top, 0px)); left: 10px;
+  font-size: 16px; font-family: ui-monospace, Menlo, monospace;
+  text-shadow: 0 1px 4px rgba(0,0,0,.7);
+}
+
+/* Экраны */
+.screen {
+  position: absolute; inset: 0; flex-direction: column; align-items: center;
+  box-sizing: border-box; text-align: center;
+  padding: calc(24px + env(safe-area-inset-top, 0px)) 20px calc(28px + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
+}
+.screen.solid { justify-content: center; pointer-events: auto; color: var(--ink); }
+/* Небо и луг: фон загрузки и экрана «Нажми» */
+.screen.sky {
+  background:
+    radial-gradient(120% 40% at 20% 62%, #9FD868 0, rgba(159,216,104,0) 70%),
+    radial-gradient(100% 35% at 90% 66%, #7CC36A 0, rgba(124,195,106,0) 70%),
+    linear-gradient(#61C5FD 0, #BFE6FB 50%, #B7E07A 68%, #79C257 100%);
+}
+.screen.error { background: linear-gradient(#FDE7E3, #FBD2CB); }
+.screen.error .logo { color: #B3382C; }
+.screen.clickable { cursor: pointer; }
+.overlay { justify-content: flex-start; }
+.spacer { flex: 1; }
+
+.logoImg {
+  width: min(50vw, 230px); height: auto; border-radius: 50%; margin-bottom: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  animation: logoBounce 1.6s ease-in-out infinite;
+}
+@keyframes logoBounce { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-12px) scale(1.04); } }
+@media (prefers-reduced-motion: reduce) { .logoImg { animation: none; } }
+
+.logo { font-size: clamp(40px, 12vw, 56px); font-weight: 900; line-height: .95; margin: 0 0 20px; color: #25603A; text-shadow: 0 3px 0 rgba(255,255,255,.55), 0 6px 10px rgba(0,0,0,.18); }
+.big { font-size: 26px; font-weight: 700; margin: 0; }
+.title { font-size: 34px; font-weight: 900; margin: 8px 0 0; text-shadow: 0 2px 6px rgba(0,0,0,.5); }
+.hint { font-size: 22px; font-weight: 700; margin: 0 0 16px; transition: opacity .8s; text-shadow: 0 2px 6px rgba(0,0,0,.6); }
+.pulse { animation: pulse 1.8s ease-in-out infinite; }
+@keyframes pulse { 50% { transform: scale(1.05); } }
+@media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
+
+/* Полоска загрузки */
+.bar { width: 70%; max-width: 320px; height: 22px; border-radius: 11px; background: rgba(255,255,255,.75); margin-top: 16px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.6); }
+.barFill { width: 0; height: 100%; border-radius: 11px; background: linear-gradient(#52B152, #2E8B3A); box-shadow: inset 0 2px 0 rgba(255,255,255,.45); transition: width .2s; }
+
+/* Кнопки: крупные, мягкий градиент, светлая кромка сверху, мягкая тень снизу */
+.btn, .arrow, .card {
+  pointer-events: auto; font: inherit; border: 0; cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; margin: 0; box-sizing: border-box;
+  min-height: 60px; min-width: 180px; padding: 0 28px; border-radius: 30px;
+  font-size: 26px; font-weight: 900; color: var(--ink);
+  background: linear-gradient(#E9F9FD, #C9F0F9);
+  box-shadow: inset 0 2px 0 #fff, 0 0 0 2px #ADE1FD, 0 5px 10px rgba(26,106,154,.3);
+}
+.btn.secondary { color: #fff; background: linear-gradient(#2F8446, var(--green-dark)); box-shadow: inset 0 2px 0 rgba(255,255,255,.27), 0 0 0 2px #FEE98A, 0 5px 10px rgba(0,0,0,.3); }
+.btn.main {
+  min-height: 84px; min-width: min(100%, 300px); font-size: clamp(22px, 6.6vw, 36px); padding: 0 16px; max-width: 100%;
+  color: #3A2F10; background: linear-gradient(#FFE98A, #FFD04F 55%, var(--sun));
+  box-shadow: inset 0 3px 0 rgba(255,255,255,.7), inset 0 -3px 0 rgba(232,163,31,.35),
+    0 0 0 4px rgba(255,255,255,.3), 0 0 0 9px rgba(255,255,255,.12), 0 0 22px rgba(255,214,90,.65), 0 8px 16px rgba(183,121,31,.35);
+}
+.btn.play {
+  min-height: 64px; min-width: 200px; padding: 0 40px; font-size: 30px; color: #fff;
+  border: 5px solid transparent;
+  background: linear-gradient(#86DB62, #3FA040 55%, #2E8B3A) padding-box, linear-gradient(#EBA970, #B9692F 60%, #8E4A1F) border-box;
+  text-shadow: 0 2px 0 rgba(31,107,52,.85), 0 0 8px rgba(31,107,52,.6);
+  box-shadow: inset 0 3px 0 rgba(255,255,255,.4), inset 0 -4px 6px rgba(0,60,20,.25), 0 6px 12px rgba(0,0,0,.35);
+}
+.btn.small { min-height: 52px; min-width: 140px; font-size: clamp(17px, 4.8vw, 21px); }
+.btn:active, .card:active { transform: translateY(2px) scale(.97); }
+.arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 58px; height: 58px; border-radius: 50%; font-size: 30px; padding: 0;
+  color: #fff; background: linear-gradient(#3C9A52, var(--green-dark));
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.33), 0 0 0 3px rgba(255,255,255,.8), 0 5px 10px rgba(0,0,0,.3);
+}
+.arrow:active { transform: translateY(2px) scale(.94); }
+.row { display: flex; align-items: center; justify-content: center; gap: 14px; }
+
+.sound { position: absolute; top: max(14px, env(safe-area-inset-top)); right: 14px; z-index: 5; }
+.side { position: absolute; top: calc(43% - 29px); }
+.side.left { left: 12px; }
+.side.right { right: 12px; }
+.heroName, .heading {
+  padding: 4px 26px; border-radius: 99px; font-weight: 900; color: var(--ink); background: var(--cream);
+  box-shadow: inset 0 2px 0 #fff, 0 4px 10px rgba(0,0,0,.25);
+}
+.heroName { margin-bottom: 12px; font-size: 30px; }
+.heading { margin: 0; font-size: clamp(22px, 6.4vw, 28px); }
+.dots { display: flex; gap: 10px; margin-bottom: 18px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.6); box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: transform .2s, background .2s; }
+.dot.on { background: var(--sun); box-shadow: 0 0 0 2px #fff, 0 1px 4px rgba(0,0,0,.35); transform: scale(1.3); }
+
+.cards { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: clamp(10px, 2.2vh, 18px); width: 100%; max-width: 420px; }
+/* Вывеска «Выбери свой класс»: доска на верёвках, рисуется в sectionSelect.js (SVG) */
+.sign { position: relative; width: min(100%, 340px); margin-top: 36px; }
+.sign svg { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 6px 8px rgba(0,0,0,.3)); }
+.sign h2 {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; margin: 0; text-align: center;
+  font-size: clamp(26px, 8vw, 34px); font-weight: 900; line-height: 1.05; color: #FCE9A6;
+  text-shadow: -2px 0 #5B4012, 2px 0 #5B4012, 0 -2px #5B4012, 0 2px #5B4012, -1.5px -1.5px #5B4012, 1.5px -1.5px #5B4012, -1.5px 1.5px #5B4012, 1.5px 1.5px #5B4012, 0 4px 5px rgba(0,0,0,.4);
+}
+.defs { position: absolute; }
+/* Лучи света и светлячки поверх размытого леса */
+.screen.fx {
+  background:
+    radial-gradient(circle at 16% 24%, rgba(255,255,205,.95) 0 2px, transparent 4px),
+    radial-gradient(circle at 82% 14%, rgba(255,255,205,.85) 0 2px, transparent 4px),
+    radial-gradient(circle at 64% 40%, rgba(255,255,205,.8) 0 1.5px, transparent 3.5px),
+    radial-gradient(circle at 30% 52%, rgba(255,255,205,.7) 0 1.5px, transparent 3.5px),
+    radial-gradient(circle at 90% 62%, rgba(255,255,205,.8) 0 2px, transparent 4px),
+    radial-gradient(circle at 8% 78%, rgba(255,255,205,.8) 0 2px, transparent 4px),
+    linear-gradient(112deg, transparent 6%, rgba(255,250,190,.30) 18%, transparent 30%, rgba(255,250,190,.2) 44%, transparent 56%);
+}
+
+.card {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: clamp(80px, 12.5vh, 108px); border-radius: 30px; border: 4px solid;
+}
+/* блик сверху, как у стекла */
+.card::after { content: ''; position: absolute; left: 8px; right: 8px; top: 3px; height: 44%; border-radius: 24px 24px 50% 50% / 24px 24px 28px 28px; background: linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.04)); pointer-events: none; }
+/* 1-4: пастельный зелёный → золотисто-жёлтый, золотисто-оранжевая рамка */
+.card:nth-child(1) {
+  --ol: transparent; color: #24482F; border-color: #FFC24A #F2A22A #D98418 #F2A22A;
+  background: linear-gradient(100deg, #C7EBBE 0%, #E6EFB6 45%, #F8E29C 100%);
+  box-shadow: inset 0 0 0 2px rgba(255,238,170,.9), inset 0 0 16px rgba(255,226,120,.85), 0 0 10px rgba(246,166,35,.4), 0 8px 14px rgba(0,0,0,.28);
+}
+/* 5-8: лазурный → глубокий бирюзовый, синяя рамка, голубое свечение */
+.card:nth-child(2) {
+  --ol: #0A4A66; color: #fff; border-color: #6ADAF2 #2C7BDC #1B4DA6 #2C7BDC;
+  background: radial-gradient(circle at 26% 50%, rgba(110,250,250,.8) 0, transparent 38%), linear-gradient(100deg, #1B84BE 0%, #17A5B6 48%, #0C6A93 100%);
+  box-shadow: inset 0 0 0 2px rgba(255,222,140,.8), inset 0 0 18px rgba(120,215,255,.7), 0 8px 14px rgba(0,0,0,.3);
+}
+/* 9-11: янтарный → терракотовый, золотая рамка, лавр и искорки */
+.card:nth-child(3) {
+  --ol: #6B2A10; color: #FFEFD0; border-color: #FFD76E #F2B23C #D88A1B #F2B23C;
+  background: linear-gradient(100deg, #C9481F 0%, #E8742E 48%, #B2361D 100%);
+  box-shadow: inset 0 0 0 2px rgba(255,226,140,.85), inset 0 0 16px rgba(255,200,100,.55), 0 0 12px rgba(255,194,61,.55), 0 8px 14px rgba(0,0,0,.3);
+}
+.card:nth-child(2) .cardTitle, .card:nth-child(3) .cardTitle {
+  color: #FFE9A6;
+  text-shadow: -2px 0 var(--ol), 2px 0 var(--ol), 0 -2px var(--ol), 0 2px var(--ol), -1.5px -1.5px var(--ol), 1.5px -1.5px var(--ol), -1.5px 1.5px var(--ol), 1.5px 1.5px var(--ol), 0 4px 4px rgba(0,0,0,.35);
+}
+.card:nth-child(2) .cardName, .card:nth-child(3) .cardName { text-shadow: 0 2px 3px rgba(0,0,0,.45); }
+.card:nth-child(1) .cardTitle { text-shadow: 0 1px 0 rgba(255,255,255,.75); }
+.cardTitle, .cardName { position: relative; z-index: 1; }
+.cardTitle { font-size: clamp(26px, 7.6vw, 32px); font-weight: 900; line-height: 1.1; }
+.cardName { font-size: clamp(16px, 4.8vw, 19px); font-weight: 700; }
+.deco { position: absolute; width: clamp(62px, 21vw, 92px); height: auto; pointer-events: none; }
+.deco.tr { top: -2px; right: -2px; }
+.deco.bl { bottom: -2px; left: -2px; }
+
+/* Значки Phosphor Fill: файл лежит в assets/icons, цвет берётся из color текста */
+.ic { display: inline-block; flex: none; width: 1.25em; height: 1.25em; margin-right: 8px; background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+.arrow .ic { margin: 0; width: 1em; height: 1em; }
+.ic-play { --icon: url("assets/icons/play-fill.svg"); }
+.ic-caret-left { --icon: url("assets/icons/caret-left-fill.svg"); }
+.ic-caret-right { --icon: url("assets/icons/caret-right-fill.svg"); }
+.ic-speaker-high { --icon: url("assets/icons/speaker-high-fill.svg"); }
+.ic-speaker-slash { --icon: url("assets/icons/speaker-slash-fill.svg"); }
+.ic-house { --icon: url("assets/icons/house-line-fill.svg"); color: var(--green-dark); }
+
+/* Размытый фон на экране выбора раздела (масштаб прячет светлую кайму по краям) */
+#game { transition: filter .3s; }
+#game.blurred { filter: blur(6px); transform: scale(1.08); }
